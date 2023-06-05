@@ -1,5 +1,6 @@
-import InputMask from "react-input-mask";
+// import InputMask from "react-input-mask";
 import { useForm } from 'react-hook-form';
+import React from "react";
 
 
 function FormFeedback() {
@@ -25,14 +26,15 @@ function FormFeedback() {
         mode:"onBlur"
       });
 
-    let formData = document.forms.communication;
-    let xhr = new XMLHttpRequest();
+      
+      let formData = document.forms.communication;
+let xhr = new XMLHttpRequest();
 
 function goSendIt() {
   if (formData.user.value && formData.tel.value) {
     let obj = {
-        user: formData.user.value,
-        tel: formData.tel.value
+      name: formData.user.value,
+      num: formData.tel.value
     }
     let str = JSON.stringify(obj);
     xhr.open("POST", "/message/");
@@ -45,13 +47,8 @@ function goSendIt() {
   } else {
     alert("Не заполнена")
   }
-  reset();
+  reset()
 }
-    
-    // const onSubmit = (data) => {
-    //   console.log(JSON.stringify(data));
-    //   reset();
-    // }
 
 
     return (
@@ -59,13 +56,13 @@ function goSendIt() {
             <div className="modal__title">
                 Оставьте заявку 
             </div>
-            <div class="modal__description">
+            <div className="modal__description">
                 Наш эксперт развлечений ответит на&nbsp;все ваши вопросы. 
             </div>
             <form method="post" name="communication" className="gray-form vertical-form">
                 <label className="input">
-                    <span className="input__label menu-18 gray-form" >Имя</span>
-                    <input
+                    <label className="input__label menu-18 gray-form" >Имя</label>
+                    <input 
                     {...register('user', { 
                         required: "*Поле обязательно к заполнению",
                         minLength: {
@@ -77,14 +74,15 @@ function goSendIt() {
                      name="user" 
                      placeholder="Как вас зовут?" 
                      data-label="Имя пользователя" 
-                     className="input-text"/>
+                     className="input-text"
+                     />
                 </label>
                 <div style={{height:40}}>
                     {errors?.user && <p className="errors"> {errors?.user.message || "Error!"}</p>}
                 </div>
                 <label className="input">
-                    <span className="input__label menu-18 gray-form">Телефон*</span>
-                    <InputMask 
+                    <label className="input__label menu-18 gray-form">Телефон*</label>
+                    <input 
                     {...register('tel', { 
                         required: "*Поле обязательно к заполнению"
                      })}
@@ -95,13 +93,14 @@ function goSendIt() {
                     data-req="true" 
                     className="input-text" 
                     mask="+7 999 999 99 99">
-    </InputMask>
+                  </input>
+                    
     
                 </label>
                 <div style={{height:40}}>
                     {errors?.tel && <p className="errors"> {errors?.tel.message || "Error!"}</p>}
                 </div>
-                <button onSubmit={handleSubmit(goSendIt)} onclick={goSendIt()} className="btnCTA center" type="submit" disabled={!isValid}>Отправить</button>
+                <button onSubmit={handleSubmit(goSendIt)}  className="btnCTA center" type="submit" disabled={!isValid}>Отправить</button>
             </form>
         </div>
     )

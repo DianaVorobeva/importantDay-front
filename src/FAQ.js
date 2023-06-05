@@ -6,15 +6,15 @@ function FAQ() {
         <div className='.wrapper4'>
         <div className='contQA'>
         <h3 className='headerFAQ titleText'>ВОПРОС-ОТВЕТ</h3>
-        <Accordion className='accordion' flush>
-  <Accordion.Item eventKey="0" flush className='accordionItem'>
-    <Accordion.Header flush className='accordionItem'>Как выбрать аниматора?</Accordion.Header>
-    <Accordion.Body flush>
+        <Accordion className='accordion'>
+  <Accordion.Item eventKey="0" className='accordionItem'>
+    <Accordion.Header className='accordionItem'>Как выбрать аниматора?</Accordion.Header>
+    <Accordion.Body>
     Спросите ребенка, кого он бы хотел увидеть на своём празднике, скорее всего у него есть любимый герой. 
 Если у ребенка нет предпочтений, или приход аниматора станет для него сюрпризом, мы посоветуем Вам самых популярных героев сезона
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="1" flush>
+  <Accordion.Item eventKey="1">
     <Accordion.Header>Сколько аниматоров пригласить на детский праздник?</Accordion.Header>
     <Accordion.Body>
     До 10 детей – 1-2 аниматора, от 10 до 30 – 2-3 аниматора, от 30 и выше – 3-4 аниматора. Так же нужно учитывать возраст детей, если маленьким гостям 2-4 года, то лучше пригласите 2-х артистов: малышам необходимо много внимания и помощь во время игр.
