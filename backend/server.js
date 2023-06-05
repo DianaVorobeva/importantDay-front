@@ -1,6 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const http = require('http');
-
+const cors = require('cors');
+http.use(cors())
 
 require('dotenv').config();
 const token = process.env.TOKEN || "токен бота узнаешь у botFathers"
