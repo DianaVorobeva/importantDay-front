@@ -31,10 +31,9 @@ function Decorations({handleFormModal}) {
     
      <div>
         <div className="contBanner4">
-            <div className="wrapper5">
+            <div className="newWrapper2">
             <h1>Оформление детских праздников шарами и декорациями</h1>
-            <p>Иногда не достает всего пары деталей, чтобы погружение в атмосферу волшебства было наиболее полным. Наша команда готова помочь и приложить все усилия, чтобы граница между сказочным и реальным миром почти перестала существовать.</p>
-            <button className="btnCTA">Оставить заявку</button> 
+            <button className="btnCTA" onClick={handleFormModal}>Оставить заявку</button> 
             </div>
         </div>
         <div className="wrapper6">
@@ -48,17 +47,9 @@ function Decorations({handleFormModal}) {
                         <div onClick={() => handleModal(id)} key={id} className="photoZone" style={{backgroundImage:`url(${image})`}}>
                             <p className="decorHeader1">{title}</p>
                         </div>
-                        ) } 
-                if (id>=3) {
-                    return (
-                        <div onClick={() => handleModal(id)}  key={id} className="cell bottomCell" style={{backgroundImage:`url(${image})`}}>
-                            <p className="decorHeader2">{title}</p>
-                        </div>
-                        ) 
-                }
-                    else { 
+                        ) } else { 
                         return (
-                            <div onClick={() => handleModal(id)}  key={id} className="cell " style={{backgroundImage:`url(${image})`}}>
+                            <div onClick={() => handleModal(id)}  key={id} className="cell" style={{backgroundImage:`url(${image})`}}>
                                 <p className="decorHeader2">{title}</p>
                             </div>
                          ) }
@@ -71,7 +62,7 @@ function Decorations({handleFormModal}) {
         </div>
 
         <DecorModal  open={isOpen} onClose={() => setIsOpen(false)}>
-            <DecorItem id={itemId}/>
+            <DecorItem id={itemId} handleFormModal={handleFormModal}/>
         </DecorModal>
         
         </div>

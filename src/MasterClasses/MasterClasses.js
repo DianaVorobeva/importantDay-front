@@ -31,13 +31,13 @@ function Decorations({handleFormModal}) {
     
      <div>
         <div className="contBanner5">
-            <div className="wrapper5">
-            <h1>Оформление детских праздников шарами и декорациями</h1>
-            <p>Иногда не достает всего пары деталей, чтобы погружение в атмосферу волшебства было наиболее полным. Наша команда готова помочь и приложить все усилия, чтобы граница между сказочным и реальным миром почти перестала существовать.</p>
-            <button className="btnCTA">Оставить заявку</button> 
+            <div className="newWrapper3">
+            <h1>Мастер-классы</h1>
+            <p className="text">Мастер класс- это увлекательные занятия, которые развивают воображение, внимательность, мелкую моторику, сенсорику ребенка. Результат каждого мастер-класса — полноценная законченная работа, выполненная ребенком самостоятельно, но по под чутким руководством наших мастеров. </p>
+            <button className="btnCTA" onClick={handleFormModal}>Оставить заявку</button> 
             </div>
         </div>
-        <div className="wrapper6">
+    
           
             <div className="wrapper8">
            
@@ -55,11 +55,11 @@ function Decorations({handleFormModal}) {
             }))
             }
             </div>
-        </div>
+  
         </div>
 
         <MasterClassModal  open={isOpen} onClose={() => setIsOpen(false)}>
-            <MasterClassItem id={itemId}/>
+            <MasterClassItem id={itemId} handleFormModal={handleFormModal}/>
         </MasterClassModal>
         
         </div>

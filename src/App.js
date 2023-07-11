@@ -5,17 +5,16 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import logo from './assets/logo.JPG';
+import logo from './assets/logo.png';
 import About from './About';
 import Home from './Home';
-import Articles from './Articles';
 import Animators from './Animators/Animators';
 import Show from './Show/Show';
 import MasterClasses from '../src/MasterClasses/MasterClasses';
 import Additional from '../src/Additional/Additional';
 import Portfolio from './Portfolio/Portfolio';
 import telegram from './assets/telegram.png';
-import whatsapp from './assets/whatsapp.svg';
+import youtube from './assets/youtube.png';
 import vk from './assets/vk.png'
 import Sweets from './Sweets/Sweets';
 import Decorations from './Decorations/Decorations';
@@ -42,12 +41,10 @@ function App() {
     <span className='dot'>.</span>
     <Link to="/portfolio" className='link1'>Наши кейсы</Link>
     <span className='dot'>.</span>
-    <Link to="/articles" className='link1'>Статьи</Link> 
-    <span className='dot'>.</span>
     <Link to="tel:9876543210" className='phone'>+7 (499) 877-51-38</Link>
-    <Link to="https://msng.link/o/?https://vk.com/id22353018=vk" className='link1 linkVk'><img src={vk} width="40px" alt="vk"/></Link>
-    <Link to="https://msng.link/o/?diana_mc_di=tg" className='linkContact linkTelegram'><img src={telegram} width="40px" alt="telegram"/>Telegram</Link>
-    <Link to="https://msng.link/o/?89615143725=wa" className='linkContact linkWhatsApp'><img src={whatsapp} width="40px" alt="wa" fill="currentColor"/>WhatsApp</Link>
+    <Link to="https://vk.com/id811802059"  className='link1 linkVk'><img src={vk} width="40px" alt="vk"/></Link>
+    <Link to="https://t.me/animatorisochi" className='linkContact linkTelegram'><img src={telegram} width="40px" alt="telegram"/>Telegram</Link>
+    <Link to="https://youtube.com/@PrazdnikSochiAndMoscow2023" className='linkContact linkWhatsApp linkYoutube'><img src={youtube} width="40px" alt="Youtube" fill="currentColor"/>Youtube</Link>
     </div>
     <div className='contLink2'>
     <Link to="/animators" className='link2'>Аниматоры</Link>
@@ -64,7 +61,6 @@ function App() {
        <Route path="/" element={<Home handleFormModal={handleFormModal}/>}/>
        <Route path="/about" element={<About handleFormModal={handleFormModal}/>}/>
        <Route path="/portfolio" element={<Portfolio handleFormModal={handleFormModal}/>}/>
-       <Route path="/articles" element={<Articles handleModal={handleFormModal}/>}/>
        <Route path="/animators" element={<Animators handleFormModal={handleFormModal}/>}/>
        <Route path="/show" element={<Show handleFormModal={handleFormModal}/>}/>
        <Route path="/masterClasses" element={<MasterClasses handleFormModal={handleFormModal}/>}/>

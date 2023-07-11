@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import ModalVideo from 'next-modal-video';
 import '../modal-video.min.css';
 
-function VideoBanner()  {
+function VideoBanner({handleFormModal})  {
 
     const [isOpen, setOpen] = useState(false);
 
@@ -15,13 +15,13 @@ function VideoBanner()  {
         channel='youtube'  
         autoplay 
         isOpen={isOpen} 
-        videoId="slMub4NtrSk" 
+        videoId="NtW1cbgImCk" 
         onClose={() => setOpen(false)}
         />
-        <h1>Узнайте больше о нашем подходе!</h1>
-        <p>Нажмите на значок видео, чтобы заглянуть за кулисы праздника!</p>
+        <h1 className='headerVideo'>Узнайте больше о нашем подходе!</h1>
+        <p className='textVideo'>Нажмите на значок видео, чтобы заглянуть за кулисы праздника!</p>
         <button className="btn-primary" onClick={()=> setOpen(true)}> <img  src={play} alt="play" className="playImg"/></button>
-        <button className="btnCTA">Вызвать волшебников</button>
+        <button className="btnCTA" onClick={handleFormModal}>Вызвать волшебников</button>
     </React.Fragment>
     </div>
     )

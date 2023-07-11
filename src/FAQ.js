@@ -3,19 +3,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function FAQ() {
     return (
-        <div className='.wrapper4'>
+        <div className=''>
         <div className='contQA'>
         <h3 className='headerFAQ titleText'>ВОПРОС-ОТВЕТ</h3>
         <Accordion className='accordion'>
-  <Accordion.Item eventKey="0" className='accordionItem'>
+  <Accordion.Item eventKey="0" className='itemQA'>
     <Accordion.Header className='accordionItem'>Как выбрать аниматора?</Accordion.Header>
     <Accordion.Body>
     Спросите ребенка, кого он бы хотел увидеть на своём празднике, скорее всего у него есть любимый герой. 
 Если у ребенка нет предпочтений, или приход аниматора станет для него сюрпризом, мы посоветуем Вам самых популярных героев сезона
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="1">
-    <Accordion.Header>Сколько аниматоров пригласить на детский праздник?</Accordion.Header>
+  <Accordion.Item eventKey="1" className='itemQA'>
+    <Accordion.Header  className='accordionItem'>Сколько аниматоров пригласить на детский праздник?</Accordion.Header>
     <Accordion.Body>
     До 10 детей – 1-2 аниматора, от 10 до 30 – 2-3 аниматора, от 30 и выше – 3-4 аниматора. Так же нужно учитывать возраст детей, если маленьким гостям 2-4 года, то лучше пригласите 2-х артистов: малышам необходимо много внимания и помощь во время игр.
 Чтобы увлечь подростков, также лучше пригласите не менее 2-х артистов. Для тинэйджеров важны энергия и авторитет. 
@@ -23,20 +23,20 @@ function FAQ() {
 Примечание! Когда вы приглашаете сразу двух персонажей, в программе появляются элементы иммерсионного театра.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="2">
-    <Accordion.Header>Аниматор точно приедет на праздник?</Accordion.Header>
+  <Accordion.Item eventKey="2" className='itemQA'>
+    <Accordion.Header className='accordionItem'>Аниматор точно приедет на праздник?</Accordion.Header>
     <Accordion.Body>
     Несомненно, мы 15 лет на рынке детских праздников и безмерно дорожим своей репутацией и детской верой в чудеса. У нас большая команда, и всегда есть возможность подстраховать исполнителя на случай форс мажоров и болезни.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="3">
-    <Accordion.Header>Аниматор приезжает с музыкальным сопровождением?</Accordion.Header>
+  <Accordion.Item eventKey="3" className='itemQA'>
+    <Accordion.Header className='accordionItem'>Аниматор приезжает с музыкальным сопровождением?</Accordion.Header>
     <Accordion.Body>
     Да, любая наша программа всегда обеспечена музыкальным сопровождением, колонки портативные, нам даже розетка не нужна
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="4">
-    <Accordion.Header>Какие игры и конкурсы проводят аниматоры?</Accordion.Header>
+  <Accordion.Item eventKey="4" className='itemQA'>
+    <Accordion.Header className='accordionItem'>Какие игры и конкурсы проводят аниматоры?</Accordion.Header>
     <Accordion.Body>
     Конкурсы и игры зависят от выбранной Вами тематики, возраста и количества деток на празднике. 
 Если гости праздника – пираты, то детки отправляются в пиратское приключение на поиски пиратских сокровищ. 
@@ -45,14 +45,14 @@ function FAQ() {
 Принцессы же – школу хороших манер и блистательный королевский бал.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="5">
-    <Accordion.Header>Праздник малышам. С какого возраста можно приглашать аниматора?</Accordion.Header>
+  <Accordion.Item eventKey="5" className='itemQA'>
+    <Accordion.Header className='accordionItem'>Праздник малышам. С какого возраста можно приглашать аниматора?</Accordion.Header>
     <Accordion.Body>
     Очень часто нас приглашают на годовасие ребенка, конечно в этом возрасте именинник еще не способен запомнить праздник, зато вся семья будет в восторге. На первый годик отлично подходят милые ростовые куклы, плюшевые мягкие животные, шоу мыльных пузырей и дрессированные животные. Для деток 2-3 лет у нас есть малышники, это специально разработанные для малышей программы с мягким и трогательным реквизитом, адаптированной музыкой, и играми, которые понятны малышам. Идеально, если мама будет находится вместе с ребенком на программе с аниматором, это поможет ему проще включиться в игру и убедиться в безопасности происходящего. Не стоит ждать в этом возрасте динамичных ярких программ, деткам в этом возрасте гораздо комфортней мягкий праздник. Также рекомендуем для возраста 2-4 года шоу мыльных пузырей с любимым героем и кукольный театр.
     </Accordion.Body>
   </Accordion.Item>
-  <Accordion.Item eventKey="6">
-    <Accordion.Header>Нужна ли предоплата для бронирования?</Accordion.Header>
+  <Accordion.Item eventKey="6" className='itemQA'>
+    <Accordion.Header className='accordionItem'>Нужна ли предоплата для бронирования?</Accordion.Header>
     <Accordion.Body>
     Обеспечительный взнос для праздника 1000 рублей, остальная сумма оплачивается после проведения мероприятия.
 Исключения составляют большие мероприятия, требующие подготовительного этапа (создание декораций, индивидуальный сценарий, уникальный реквизит и тд), в таком случае предоплата рассчитывается индивидуально.

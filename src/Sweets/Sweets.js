@@ -33,8 +33,7 @@ function Sweets({handleFormModal}) {
         <div className="contBanner6">
             <div className="wrapper5">
             <h1>Угощения</h1>
-            <p>Покорять волшебные миры лучше всего, основательно подкрепившись. Чтобы у юных гостей не иссякла богатырская сила, мы готовим для них различные угощения и сладости из натуральных и свежих продуктов.</p>
-            <button className="btnCTA">Оставить заявку</button> 
+            <button className="btnCTA" onClick={handleFormModal}>Оставить заявку</button> 
             </div>
         </div>
         <div className="wrapper6">
@@ -51,15 +50,15 @@ function Sweets({handleFormModal}) {
                         ) } 
                 if (id>=3) {
                     return (
-                        <div onClick={() => handleModal(id)}  key={id} className="cell bottomCell" style={{backgroundImage:`url(${image})`}}>
-                            <p className="decorHeader2">{title}</p>
+                        <div key={id} className="cell bottomCell" style={{backgroundImage:`url(${image})`}}>
+                            <p className="decorHeader4">{title}</p>
                         </div>
                         ) 
                 }
                     else { 
                         return (
-                            <div onClick={() => handleModal(id)}  key={id} className="cell " style={{backgroundImage:`url(${image})`}}>
-                                <p className="decorHeader2">{title}</p>
+                            <div key={id} className="cell " style={{backgroundImage:`url(${image})`}}>
+                                <p className="decorHeader3">{title}</p>
                             </div>
                          ) }
                 
@@ -71,7 +70,7 @@ function Sweets({handleFormModal}) {
         </div>
 
         <SweetsModal  open={isOpen} onClose={() => setIsOpen(false)}>
-            <SweetsItem id={itemId}/>
+            <SweetsItem id={itemId} handleFormModal={handleFormModal}/>
         </SweetsModal>
         
         </div>

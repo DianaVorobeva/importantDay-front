@@ -1,6 +1,10 @@
-// import InputMask from "react-input-mask";
+import { withHookFormMask } from 'use-mask-input';
+import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import React from "react";
+import { useState } from 'react';
+import Swal from 'sweetalert2';
+
 
 
 function FormFeedback() {
@@ -17,53 +21,76 @@ function FormFeedback() {
         padding: '10px'
       }
 
+      
     const {
         register,
         handleSubmit,
         reset,
-        formState: { errors, isValid },
+        formState: { errors },
       } = useForm({
         mode:"onBlur"
       });
 
-      
-      let formData = document.forms.communication;
-let xhr = new XMLHttpRequest();
+      const [userName, setUserName] = useState('');
+      const [userTel, setUserTel] = useState('');
+      const [showSuccess, setShowSuccess] = useState(false);
 
-function goSendIt() {
-  if (formData.user.value && formData.tel.value) {
-    let obj = {
-      name: formData.user.value,
-      num: formData.tel.value
-    }
-    let str = JSON.stringify(obj);
-    xhr.open("POST", "/message/");
-    xhr.send(str);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        console.log(xhr.responseText);
+      const sendMessage =  (e) => {
+        e.preventDefault();
+      let userData = {
+        userName: userName,
+        userTel: userTel
       }
+   
+        axios.post('https://importantdaybackend.onrender.com/send-notification', {userData})
+        .then((data) => {
+            console.log(data)
+            if(data.status===200) {
+                setShowSuccess(!showSuccess)
+                console.log(showSuccess)
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Что-то пошло не так...',
+                    text: 'Пожалуйста, попробуйте познее...',
+                  })
+            }
+        })
+    
     }
-  } else {
-    alert("Не заполнена")
-  }
-  reset()
-}
+    
 
 
     return (
         <div className="modalForm">
+        {showSuccess
+        ?
+        <div>
+           <div className="modal__title">
+                Спасибо, что выбрали нас!
+            </div>
+            <div>
+            <div className="heart"></div>
+            </div>
+            <div className="modal__description">
+                Скоро наш эксперт развлечений ответит на&nbsp;все ваши вопросы. 
+            </div>
+        </div>
+        :
+            <div>
+
             <div className="modal__title">
                 Оставьте заявку 
             </div>
+            
             <div className="modal__description">
                 Наш эксперт развлечений ответит на&nbsp;все ваши вопросы. 
             </div>
-            <form method="post" name="communication" className="gray-form vertical-form">
+            <form className="gray-form vertical-form">
                 <label className="input">
                     <label className="input__label menu-18 gray-form" >Имя</label>
                     <input 
-                    {...register('user', { 
+                    {...register('userName', { 
                         required: "*Поле обязательно к заполнению",
                         minLength: {
                             value:2,
@@ -71,7 +98,11 @@ function goSendIt() {
                         }
                      })}
                      type="text" 
-                     name="user" 
+          
+                     id="userName"
+                     name="userName"
+                     value={userName}
+                     onChange = {(e) => setUserName(e.target.value)}
                      placeholder="Как вас зовут?" 
                      data-label="Имя пользователя" 
                      className="input-text"
@@ -84,10 +115,17 @@ function goSendIt() {
                     <label className="input__label menu-18 gray-form">Телефон*</label>
                     <input 
                     {...register('tel', { 
-                        required: "*Поле обязательно к заполнению"
+                        required: "*Поле обязательно к заполнению",
+                        minLength: {
+                            value:10,
+                            message: "Минимум 10 символа"
+                        }
                      })}
                     type="tel" 
-                    name="tel" 
+                    name="userTel" 
+                    id="userTel"
+                    value={userTel}
+                    onChange = {(e) => setUserTel(e.target.value)}
                     placeholder="Введите телефон*" 
                     data-label="Телефон"  
                     data-req="true" 
@@ -100,8 +138,13 @@ function goSendIt() {
                 <div style={{height:40}}>
                     {errors?.tel && <p className="errors"> {errors?.tel.message || "Error!"}</p>}
                 </div>
-                <button onSubmit={handleSubmit(goSendIt)}  className="btnCTA center" type="submit" disabled={!isValid}>Отправить</button>
+                <button onClick={sendMessage} className="btnCTA center"  type="button" disabled={userName==="" || userTel===""} >Отправить</button>
             </form>
+            </div>
+        
+            
+   }
+      
         </div>
     )
 }

@@ -28,13 +28,12 @@ function Show({handleFormModal}) {
      ? 
      <div>
         <div className="contBanner3">
-            <div className="wrapper5">
-            <h1>Шоу-программы и квесты</h1>
-            <p>В один миг сказка может превратиться в увлекательный перфоманс или квест и добавить волшебства этому дню. Больше тайн, больше загадок, больше игр и головоломок — чтобы никому не было скучно на нашем празднике!</p>
-            <button className="btnCTA">Оставить заявку</button> 
+            <div className="newWrapper4">
+            <h1>Шоу-программы</h1>
+            <button className="btnCTA" onClick={handleFormModal}>Оставить заявку</button> 
             </div>
         </div>
-        <div className="wrapper6">
+     
          <FilterShow filterType={filterType} filterAll={filterAll}/>
 
             <div className="wrapper7">
@@ -49,10 +48,9 @@ function Show({handleFormModal}) {
         )}
         </div>
         </div>
-        </div>
 
         :
-        <ItemDescription id={itemId}/>}
+        <ItemDescription id={itemId} handleFormModal={handleFormModal}/>}
         
         </div>
     )

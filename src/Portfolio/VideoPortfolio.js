@@ -15,7 +15,7 @@ function VideoPortfolio({id})  {
         channel='youtube'  
         autoplay 
         isOpen={isOpen} 
-        videoId="slMub4NtrSk" 
+        videoId={dataPortfolio[id].videoId} 
         onClose={() => setOpen(false)}
         />
         <div onClick={()=> setOpen(true)}>

@@ -35,7 +35,7 @@ function SliderItems({id}) {
         <div className="wrapper">
             <div className="block2">
                 <img onClick={previousSlide} src={arrowBlackLeft} width="30px" alt="arrow" className="arrow"/>
-                <img src={image} alt="options" className="imageOptions"/>
+                <img src={image} alt="options" className="imageDecorInner"/>
                 <img onClick={nextSlide} src={arrowBlackRight} width="30px" alt="arrow" className="arrow"/>
             </div>
         </div> 

@@ -1,9 +1,11 @@
 import Slider from "./Slider";
 import { dataOptions } from "./data/dataOptions";
-import About from "./About"; 
-import VideoBanner from "./video/VideoBanner"; 
-import circle from './assets/circle.png'; 
+import VideoBanner from "./video/VideoBanner";  
 import FAQ from "./FAQ";
+import React from 'react';
+import FormFeedback from "./Form/FormFeedback";
+import feedback from './assets/feedback.jpg';
+import mainImage from '../src/assets/mainImage.jpg'
 
 function Home({handleFormModal}) { 
     
@@ -15,34 +17,57 @@ function Home({handleFormModal}) {
     return (
 <div>
 	<div className="contBanner">
-	<div className="wrapper9">
-		<h1>Организация детских праздников от профессиональных аниматоров в Москве</h1>
-		<p>Поможем Вам с выбором программы под любой возраст и бюджет!</p>
-		 <button className="btnCTA" onClick={handleFormModal}>Бесплатный подбор</button> 
+	<div className="waves waves--bottom waves--white waves--big waves--anim">
+		
+		<svg width="3884" height="129" viewBox="0 0 3884 129" fill="#FFF" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path d="M3884 114.001V129L9.64582e-05 129L9.77696e-05 114C181.5 114 388.812 66.8065 575.135 48.6299C672.118 39.1976 762.047 24.3615 858.442 14.438C1019.79 -2.16661 1198.47 -4.52467 1364.51 7.75688C1557.6 22.1017 1734.22 55.6058 1933.18 59.3394C1936.12 59.3394 1939.06 59.4376 1942 59.4376C1944.94 59.4376 1947.88 59.3394 1950.82 59.3394C2149.78 55.6058 2326.4 22.1017 2519.49 7.75688C2685.53 -4.52467 2864.21 -2.16661 3025.56 14.438C3121.95 24.3615 3211.88 39.1976 3308.86 48.6299C3495.19 66.8065 3704 114.001 3884 114.001Z" />
+		</svg>
+		<svg width="3884" height="129" viewBox="0 0 3884 129" fill="#FFF" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path d="M3884 114.001V129L9.64582e-05 129L9.77696e-05 114C181.5 114 388.812 66.8065 575.135 48.6299C672.118 39.1976 762.047 24.3615 858.442 14.438C1019.79 -2.16661 1198.47 -4.52467 1364.51 7.75688C1557.6 22.1017 1734.22 55.6058 1933.18 59.3394C1936.12 59.3394 1939.06 59.4376 1942 59.4376C1944.94 59.4376 1947.88 59.3394 1950.82 59.3394C2149.78 55.6058 2326.4 22.1017 2519.49 7.75688C2685.53 -4.52467 2864.21 -2.16661 3025.56 14.438C3121.95 24.3615 3211.88 39.1976 3308.86 48.6299C3495.19 66.8065 3704 114.001 3884 114.001Z"  />
+		</svg>
+		<svg width="3884" height="129" viewBox="0 0 3884 129" fill="#FFF" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path d="M3884 114.001V129L9.64582e-05 129L9.77696e-05 114C181.5 114 388.812 66.8065 575.135 48.6299C672.118 39.1976 762.047 24.3615 858.442 14.438C1019.79 -2.16661 1198.47 -4.52467 1364.51 7.75688C1557.6 22.1017 1734.22 55.6058 1933.18 59.3394C1936.12 59.3394 1939.06 59.4376 1942 59.4376C1944.94 59.4376 1947.88 59.3394 1950.82 59.3394C2149.78 55.6058 2326.4 22.1017 2519.49 7.75688C2685.53 -4.52467 2864.21 -2.16661 3025.56 14.438C3121.95 24.3615 3211.88 39.1976 3308.86 48.6299C3495.19 66.8065 3704 114.001 3884 114.001Z"  />
+		</svg>	</div>
+	<div className="wrapper22">
+		<img src={mainImage} alt="mainImage" className="mainImage"/>
+		<h1 className="mainHeader">Организовываем детские мероприятия любой сложности под ключ.</h1>
+		<p className="textCTA">Позвоните, и мы поможем вам подобрать программу для вашего праздника.</p>
+		 <button className="btnCTA1" onClick={handleFormModal}>Бесплатный подбор</button> 
 	</div>
 	</div>
 	<div>
 		<Slider/>
-		<div className="wrapper">
-			<h1 className="titleText">Получите удовольствие от каждой минуты</h1>
-			<p className="textOf">Для агентства «АрчиШоу» организация детских праздников – главная миссия уже больше 8 лет. Ведь праздничные мероприятия – самые яркие воспоминания для будущих взрослых, это магия и чудо, которые они пронесут с собой через всю жизнь. Мы всегда стараемся по-настоящему удивить ребенка, и каждое наше мероприятие уникально. Десятки интерактивных программ, профессиональные аниматоры, которые обожают свою работу, яркие декорации, вкусный и полезный сладкий стол – вот лишь немногое, что ждет именинника и его гостей.</p>
-		</div>
 	</div>
+	
 	<div> {dataOptions.map(item => { 
-		const {id,option,title,text,link,image,bgColor} = item; 
+		const {id,option,title,text,link,image,bgColor,bgAnimation} = item; 
 	if(id%2) { 
 		return (
 		<div className="wrapper3" key={id} style={{backgroundColor:`${bgColor}`}}>
-			<div className="block2"> <img src={image} alt="options" /> </div>
+			<div className="imageBanner2"> 
+			    <img src={image} alt="options" className="bannerOptions" /> 
+				<p>{text}</p>
+				</div>
 			<div className="block3">
 				<p className="optionText">{option}</p>
 				<h2 className="titleOption">{title}</h2>
-				<p className="textOption">{text}</p>
+				
 				<div>
 				 <button onClick={()=> jump(link)} className="btnOptions">Варианты</button>
-				 <button className="btnCTA">Бесплатный подбор</button> 
+				 <button className="btnCTA" onClick={handleFormModal}>Бесплатный подбор</button> 
 				 </div>
 			</div>
+			<div className="waves waves--bottom waves--white waves--big waves--anim" >
+		
+		<svg width="3884" height="129" viewBox="0 0 3884 129" style={{fill:`${bgAnimation}`}} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path  d="M3884 114.001V129L9.64582e-05 129L9.77696e-05 114C181.5 114 388.812 66.8065 575.135 48.6299C672.118 39.1976 762.047 24.3615 858.442 14.438C1019.79 -2.16661 1198.47 -4.52467 1364.51 7.75688C1557.6 22.1017 1734.22 55.6058 1933.18 59.3394C1936.12 59.3394 1939.06 59.4376 1942 59.4376C1944.94 59.4376 1947.88 59.3394 1950.82 59.3394C2149.78 55.6058 2326.4 22.1017 2519.49 7.75688C2685.53 -4.52467 2864.21 -2.16661 3025.56 14.438C3121.95 24.3615 3211.88 39.1976 3308.86 48.6299C3495.19 66.8065 3704 114.001 3884 114.001Z" />
+		</svg>
+		<svg width="3884" height="129" viewBox="0 0 3884 129" style={{fill:`${bgAnimation}`}} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path d="M3884 114.001V129L9.64582e-05 129L9.77696e-05 114C181.5 114 388.812 66.8065 575.135 48.6299C672.118 39.1976 762.047 24.3615 858.442 14.438C1019.79 -2.16661 1198.47 -4.52467 1364.51 7.75688C1557.6 22.1017 1734.22 55.6058 1933.18 59.3394C1936.12 59.3394 1939.06 59.4376 1942 59.4376C1944.94 59.4376 1947.88 59.3394 1950.82 59.3394C2149.78 55.6058 2326.4 22.1017 2519.49 7.75688C2685.53 -4.52467 2864.21 -2.16661 3025.56 14.438C3121.95 24.3615 3211.88 39.1976 3308.86 48.6299C3495.19 66.8065 3704 114.001 3884 114.001Z"  />
+		</svg>
+		<svg width="3884" height="129" viewBox="0 0 3884 129" style={{fill:`${bgAnimation}`}}  xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path d="M3884 114.001V129L9.64582e-05 129L9.77696e-05 114C181.5 114 388.812 66.8065 575.135 48.6299C672.118 39.1976 762.047 24.3615 858.442 14.438C1019.79 -2.16661 1198.47 -4.52467 1364.51 7.75688C1557.6 22.1017 1734.22 55.6058 1933.18 59.3394C1936.12 59.3394 1939.06 59.4376 1942 59.4376C1944.94 59.4376 1947.88 59.3394 1950.82 59.3394C2149.78 55.6058 2326.4 22.1017 2519.49 7.75688C2685.53 -4.52467 2864.21 -2.16661 3025.56 14.438C3121.95 24.3615 3211.88 39.1976 3308.86 48.6299C3495.19 66.8065 3704 114.001 3884 114.001Z"  />
+		</svg>	</div>
 		</div> ) } 
 	else { 
 		return (
@@ -50,73 +75,47 @@ function Home({handleFormModal}) {
 			<div className="block3">
 				<p className="optionText">{option}</p>
 				<h2 className="titleOption">{title}</h2>
-				<p className="textOption">{text}</p>
+				
 				<div> 
 				<button onClick={()=> jump(link)} className="btnOptions">Варианты</button> 
-				<button className="btnCTA">Бесплатный подбор</button> </div>
+				<button className="btnCTA" onClick={handleFormModal}>Бесплатный подбор</button> </div>
 			</div>
-			<div className="block2"> <img src={image} alt="options" /> </div>
-		</div> ) } }) } </div>
-	<div>
-		<About/>
-		 </div>
-	<div>
-		<VideoBanner/> </div>
-	<div className="wrapper4">
-		<h2 className="headerSlide">Тарифы праздника</h2>
-		<div className="pricing">
-			<div className="priceBlock">
-				<h4 className="titlePricing">Самое главное</h4>
-				<h3 className="price">от 75 000 ₽</h3>
-				<p className="old-price">80 000 ₽</p>
-				<ul className="list">
-					<li><img src={circle} alt="circle" className="circle" />2-3 Аниматора</li>
-					<li><img src={circle} alt="circle" className="circle" />Продолжительность праздника: 2-4 часа</li>
-					<li><img src={circle} alt="circle" className="circle" />Фотосъемка праздника</li>
-					<li><img src={circle} alt="circle" className="circle" />Базовое звуковое оборудование</li>
-					<li><img src={circle} alt="circle" className="circle" />Шоу-программа из базового каталога</li>
-					<li><img src={circle} alt="circle" className="circle" />Оформление шарами</li>
-				</ul> <button className="btnCTA">Заказать</button> </div>
-			<div className="priceBlock">
-				<h4 className="titlePricing">Золотая середина</h4>
-				<h3 className="price">от 150 000 ₽</h3>
-				<p className="old-price">165 000 ₽</p>
-				<ul className="list">
-					<li><img src={circle} alt="circle" className="circle" />2-5 Аниматоров</li>
-					<li><img src={circle} alt="circle" className="circle" />Продолжительность праздника: 3-5 часа</li>
-					<li><img src={circle} alt="circle" className="circle" />Фотосъемка праздника</li>
-					<li><img src={circle} alt="circle" className="circle" />Базовое звуковое оборудование</li>
-					<li><img src={circle} alt="circle" className="circle" />Шоу-программа из базового каталога</li>
-					<li><img src={circle} alt="circle" className="circle" />Расширенный пакет оформления воздушными шарами</li>
-					<li><img src={circle} alt="circle" className="circle" />Фотозона до 10 элементов декора</li>
-					<li><img src={circle} alt="circle" className="circle" />Шоу-программа из авторского каталога</li>
-					<li><img src={circle} alt="circle" className="circle" />1 добавка из расширенного каталога услуг</li>
-					<li><img src={circle} alt="circle" className="circle" />Шоу-программа из авторского каталога</li>
-					<li><img src={circle} alt="circle" className="circle" />Персональный ивент-менеджер на площадке</li>
-				</ul> <button className="btnCTA">Заказать</button> </div>
-			<div className="priceBlock">
-				<h4 className="titlePricing">Возможно всё</h4>
-				<h3 className="price">от 350 000 ₽</h3>
-				<p className="old-price">390 000 ₽</p>
-				<ul className="list">
-					<li><img src={circle} alt="circle" className="circle" />Анимационная программа, квест или интерактивный спектакль с 4-7 героями</li>
-					<li><img src={circle} alt="circle" className="circle" />Продолжительность праздника: 4-7 часа</li>
-					<li><img src={circle} alt="circle" className="circle" />1+ шоу-программа из базового каталога</li>
-					<li><img src={circle} alt="circle" className="circle" />2+ шоу-программы из авторского каталога</li>
-					<li><img src={circle} alt="circle" className="circle" />Расширенная премиум-фотозона до 20 элементов декора</li>
-					<li><img src={circle} alt="circle" className="circle" />Расширенный пакет оформления воздушными шарами</li>
-					<li><img src={circle} alt="circle" className="circle" />Фотосъемка праздника</li>
-					<li><img src={circle} alt="circle" className="circle" />Звуковое и световое оборудование</li>
-					<li><img src={circle} alt="circle" className="circle" />2+ добавки из расширенного каталога услуг</li>
-					<li><img src={circle} alt="circle" className="circle" />Оформление Candy-bar, тематические сладости и торт</li>
-					<li><img src={circle} alt="circle" className="circle" />Тематическое оформление стола</li>
-					<li><img src={circle} alt="circle" className="circle" />Персональный подбор площадки для праздника</li>
-					<li><img src={circle} alt="circle" className="circle" />Персональный ивент-менеджер до и после мероприятия</li>
-					<li><img src={circle} alt="circle" className="circle" />Электронные пригласительные стилизованные под тематику/оформление праздника</li>
-				</ul> <button className="btnCTA">Заказать</button> </div>
+			<div className="imageBanner1">
+				<img src={image} alt="options" className="bannerOptions" />
+				<p className="barbie">{text}</p>
+				  </div>
+				  <div className="waves waves--bottom waves--white waves--big waves--anim" >
+		
+		<svg width="3884" height="129" viewBox="0 0 3884 129" style={{fill:`${bgAnimation}`}} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path  d="M3884 114.001V129L9.64582e-05 129L9.77696e-05 114C181.5 114 388.812 66.8065 575.135 48.6299C672.118 39.1976 762.047 24.3615 858.442 14.438C1019.79 -2.16661 1198.47 -4.52467 1364.51 7.75688C1557.6 22.1017 1734.22 55.6058 1933.18 59.3394C1936.12 59.3394 1939.06 59.4376 1942 59.4376C1944.94 59.4376 1947.88 59.3394 1950.82 59.3394C2149.78 55.6058 2326.4 22.1017 2519.49 7.75688C2685.53 -4.52467 2864.21 -2.16661 3025.56 14.438C3121.95 24.3615 3211.88 39.1976 3308.86 48.6299C3495.19 66.8065 3704 114.001 3884 114.001Z" />
+		</svg>
+		<svg width="3884" height="129" viewBox="0 0 3884 129" style={{fill:`${bgAnimation}`}} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path d="M3884 114.001V129L9.64582e-05 129L9.77696e-05 114C181.5 114 388.812 66.8065 575.135 48.6299C672.118 39.1976 762.047 24.3615 858.442 14.438C1019.79 -2.16661 1198.47 -4.52467 1364.51 7.75688C1557.6 22.1017 1734.22 55.6058 1933.18 59.3394C1936.12 59.3394 1939.06 59.4376 1942 59.4376C1944.94 59.4376 1947.88 59.3394 1950.82 59.3394C2149.78 55.6058 2326.4 22.1017 2519.49 7.75688C2685.53 -4.52467 2864.21 -2.16661 3025.56 14.438C3121.95 24.3615 3211.88 39.1976 3308.86 48.6299C3495.19 66.8065 3704 114.001 3884 114.001Z"  />
+		</svg>
+		<svg width="3884" height="129" viewBox="0 0 3884 129" style={{fill:`${bgAnimation}`}}  xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<path d="M3884 114.001V129L9.64582e-05 129L9.77696e-05 114C181.5 114 388.812 66.8065 575.135 48.6299C672.118 39.1976 762.047 24.3615 858.442 14.438C1019.79 -2.16661 1198.47 -4.52467 1364.51 7.75688C1557.6 22.1017 1734.22 55.6058 1933.18 59.3394C1936.12 59.3394 1939.06 59.4376 1942 59.4376C1944.94 59.4376 1947.88 59.3394 1950.82 59.3394C2149.78 55.6058 2326.4 22.1017 2519.49 7.75688C2685.53 -4.52467 2864.21 -2.16661 3025.56 14.438C3121.95 24.3615 3211.88 39.1976 3308.86 48.6299C3495.19 66.8065 3704 114.001 3884 114.001Z"  />
+		</svg>	</div>
+		</div> ) } }) } 
 		</div>
-	</div>
+	
+	<div>
+		<VideoBanner handleFormModal={handleFormModal}/>
+    </div>
 	<FAQ/>
+	<div className="blueBlock">
+	<h1 className="headerBlueBlock">Форма волшебства</h1>
+	<div className="coverBlock">
+		
+		<div className="blockFeedback">
+			<FormFeedback/>
+		</div>
+	
+	<img src={feedback} alt="group" className="imageFeedback"/>
+	</div>
+	</div>
+	
+	
 
-</div> ) } export default Home;
+</div> ) } 
+export default Home;
 

@@ -1,51 +1,69 @@
+import barbie from '../assets/barbie.jpg';
+import monkey from '../assets/monkey.jpg';
+import children from '../assets/children.jpg';
+import carSmall from '../assets/carSmall.jpg';
+import cake from '../assets/cake.jpg';
+import smile from '../assets/smile.jpg';
+
 export const dataOptions = [
     {   
         id:0,
         option: 'АНИМАЦИОННЫЕ ПРОГРАММЫ',
-        title: 'Превратите тыкву в сказку',
-        text: 'Поможем выбрать или адаптировать сценарий детского праздника, учитывая интересы вашего ребенка.',
+        title: 'Поможем подобрать подходящую для вашего ребенка тематику.',
         link: 'animators',
         bgColor: '#10a5bd',
-        image: 'https://archishow.ru/local/templates/archi/img/home/services/1.png',
+        bgAnimation: '#df7583',
+        image: barbie,
+        text: "Barbie"
     },
 
     {
         id:1,
         option: 'ШОУ-ПРОГРАММЫ И КВЕСТЫ',
-        title: 'Зажгите на празднике',
-        text: 'Реквизит, музыка, сказочные ведущие — у нас есть все, чтобы герои праздника веселились от души.',
+        title: 'Шоу программы на детский праздник подарят радость, веселье и незабываемую атмосферу.',
         link: 'show',
-        bgColor: '#f9dfbd',
-        image: 'https://archishow.ru/local/templates/archi/img/home/services/2.png'
+        bgColor: '#df7583',
+        bgAnimation: '#8c6990',
+        image: monkey
     },
 
     {
         id:2,
         option: 'СЛАДОСТИ И УГОЩЕНИЯ',
-        title: 'Устройте пир на весь мир',
-        text: 'Кейтеринг с угощениями и не только сладостями, но и любимыми блюдами из натуральных ингредиентов. Стилизуем подачу под тематику праздника.',
+        title: 'Торты и угощения',
         link: 'sweets',
-        bgColor: '#f3eaf3',
-        image: 'https://archishow.ru/local/templates/archi/img/home/services/3.png'
+        bgColor: '#8c6990',
+        bgAnimation: '#89ccb6',
+        image: cake
     },
 
     {
         id:3,
         option: 'МАСТЕР-КЛАССЫ',
-        title: 'Постройте воздушные замки',
-        text: 'Декораторы «АрчиШоу» за один день могут создать на площадке старинный замок или космическую станцию — не отличить от настоящих!',
+        title: 'Наши мастер-классы',
         link: 'masterClasses',
-        bgColor: '#f3eaf3',
-        image: 'https://archishow.ru/local/templates/archi/img/home/services/4.png'
+        bgColor: '#89ccb6',
+        bgAnimation: '#f7cfcc',
+        image: children
     },
 
     {
         id:4,
-        option: 'ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ',
-        title: 'Подумайте о мелочах',
-        text: 'Мы можем создать яркий образ в бьюти-баре, устроить взрывной сюрприз и вдохновить всех гостей прыгать от радости.',
-        link: 'additional',
+        option: 'ОФОРМЛЕНИЕ И ДЕКОРАЦИИ',
+        title: 'Самые красивые декорации и фотозоны',
+        link: 'decorations',
         bgColor: '#f7cfcc',
-        image: 'https://archishow.ru/local/templates/archi/img/home/services/5.png'
+        bgAnimation: '#d9d6f1',
+        image: carSmall
+    },
+
+    {
+        id:5,
+        option: 'ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ',
+        title: 'Дополнительные услуги',
+        link: 'additional',
+        bgColor: '#d9d6f1',
+        bgAnimation: '#fff',
+        image: smile
     }
 ]

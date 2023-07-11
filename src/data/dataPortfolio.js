@@ -1,116 +1,57 @@
+import bannerLab from '../assets/crazyLab.png';
+import bannerAlice from '../assets/bannerAlice.jpg';
+import bannerPitterPen from '../assets/bannerPitterPen.jpg';
+import bannerSherlock from '../assets/bannerSherlock.jpg';
+import bannerPirate from '../assets/bannerPirate.jpeg';
+import bannerNevermore from '../assets/bannerNevermore.jpg';
+
 export const dataPortfolio = [
+    
         {
         id:0,
-        title:'TROLLS BIRTHDAY-PARTY',
-        image:'https://archishow.ru/upload/resize_cache/iblock/615/710_450_240cd750bba9870f18aada2478b24840a/6153665a5774cdaa864e86c2e5da9f80.jpg',
-        slider: ['https://archishow.ru/upload/resize_cache/iblock/87e/1159_748_2da6ad5bfe27196691556d18b70650440/87e0825ada1a05758ab183df5f8c09dc.jpg',
-    'https://archishow.ru/upload/resize_cache/iblock/48d/1159_748_2da6ad5bfe27196691556d18b70650440/48d738642b1e3368e462f70413698200.jpg'],
-        header:'Что было реализовано:',
-        program: ['Оформление фотозоны',
-            'Кэнди-бар',
-            'Сладости и угощения',
-            'Украшение стола',
-            'Театрализованное представление',
-            'Анимационная программа',
-            'Дрессированные животные',
-            'Зрелищные шоу',
-            'Праздничная дискотека',
-            'Объемные декорации',
-            'Оформление шарами',
-            'Фото/видеосъемка'
-            ],
-        video: 'https://www.youtube.com/watch?v=16IndzFp8HQ'
+        title:'Сумасшедшая лаборатория',
+        image: bannerLab,
+        video: 'https://youtu.be/l2pJ5vsecf8',
+        videoId: 'l2pJ5vsecf8'
     },
 
     {
         id:1,
-        title:'TROLLS BIRTHDAY-PARTY',
-        image:'https://archishow.ru/upload/resize_cache/iblock/615/710_450_240cd750bba9870f18aada2478b24840a/6153665a5774cdaa864e86c2e5da9f80.jpg',
-        slider: ['https://archishow.ru/upload/resize_cache/iblock/87e/1159_748_2da6ad5bfe27196691556d18b70650440/87e0825ada1a05758ab183df5f8c09dc.jpg',
-    'https://archishow.ru/upload/resize_cache/iblock/48d/1159_748_2da6ad5bfe27196691556d18b70650440/48d738642b1e3368e462f70413698200.jpg'],
-        header:'Что было реализовано:',
-        program: ['Оформление фотозоны',
-            'Кэнди-бар',
-            'Сладости и угощения',
-            'Украшение стола',
-            'Театрализованное представление',
-            'Анимационная программа',
-            'Дрессированные животные',
-            'Зрелищные шоу',
-            'Праздничная дискотека',
-            'Объемные декорации',
-            'Оформление шарами',
-            'Фото/видеосъемка'
-            ],
-        video: 'https://www.youtube.com/watch?v=16IndzFp8HQ'
+        title:'Алиса в стране чудес',
+        image: bannerAlice,
+        video: 'https://youtu.be/wln1LsXGEtk',
+        videoId: 'wln1LsXGEtk'
     },
 
     {
         id:2,
-        title:'TROLLS BIRTHDAY-PARTY',
-        image:'https://archishow.ru/upload/resize_cache/iblock/615/710_450_240cd750bba9870f18aada2478b24840a/6153665a5774cdaa864e86c2e5da9f80.jpg',
-        slider: ['https://archishow.ru/upload/resize_cache/iblock/87e/1159_748_2da6ad5bfe27196691556d18b70650440/87e0825ada1a05758ab183df5f8c09dc.jpg',
-    'https://archishow.ru/upload/resize_cache/iblock/48d/1159_748_2da6ad5bfe27196691556d18b70650440/48d738642b1e3368e462f70413698200.jpg'],
-        header:'Что было реализовано:',
-        program: ['Оформление фотозоны',
-            'Кэнди-бар',
-            'Сладости и угощения',
-            'Украшение стола',
-            'Театрализованное представление',
-            'Анимационная программа',
-            'Дрессированные животные',
-            'Зрелищные шоу',
-            'Праздничная дискотека',
-            'Объемные декорации',
-            'Оформление шарами',
-            'Фото/видеосъемка'
-            ],
-        video: 'https://www.youtube.com/watch?v=16IndzFp8HQ'
+        title:'День рождения с пиратами',
+        image: bannerPirate,
+        video: 'https://youtu.be/k1gg5Tx2BdY',
+        videoId: 'k1gg5Tx2BdY'
     },
 
     {
         id:3,
-        title:'TROLLS BIRTHDAY-PARTY',
-        image:'https://archishow.ru/upload/resize_cache/iblock/615/710_450_240cd750bba9870f18aada2478b24840a/6153665a5774cdaa864e86c2e5da9f80.jpg',
-        slider: ['https://archishow.ru/upload/resize_cache/iblock/87e/1159_748_2da6ad5bfe27196691556d18b70650440/87e0825ada1a05758ab183df5f8c09dc.jpg',
-    'https://archishow.ru/upload/resize_cache/iblock/48d/1159_748_2da6ad5bfe27196691556d18b70650440/48d738642b1e3368e462f70413698200.jpg'],
-        header:'Что было реализовано:',
-        program: ['Оформление фотозоны',
-            'Кэнди-бар',
-            'Сладости и угощения',
-            'Украшение стола',
-            'Театрализованное представление',
-            'Анимационная программа',
-            'Дрессированные животные',
-            'Зрелищные шоу',
-            'Праздничная дискотека',
-            'Объемные декорации',
-            'Оформление шарами',
-            'Фото/видеосъемка'
-            ],
-        video: 'https://www.youtube.com/watch?v=16IndzFp8HQ'
+        title:'Академия Nevermore',
+        image: bannerNevermore,
+        video: 'https://www.youtube.com/watch?v=16IndzFp8HQ',
+        videoId: '16IndzFp8HQ'
     },
 
     {
         id:4,
-        title:'TROLLS BIRTHDAY-PARTY',
-        image:'https://archishow.ru/upload/resize_cache/iblock/615/710_450_240cd750bba9870f18aada2478b24840a/6153665a5774cdaa864e86c2e5da9f80.jpg',
-        slider: ['https://archishow.ru/upload/resize_cache/iblock/87e/1159_748_2da6ad5bfe27196691556d18b70650440/87e0825ada1a05758ab183df5f8c09dc.jpg',
-    'https://archishow.ru/upload/resize_cache/iblock/48d/1159_748_2da6ad5bfe27196691556d18b70650440/48d738642b1e3368e462f70413698200.jpg'],
-        header:'Что было реализовано:',
-        program: ['Оформление фотозоны',
-            'Кэнди-бар',
-            'Сладости и угощения',
-            'Украшение стола',
-            'Театрализованное представление',
-            'Анимационная программа',
-            'Дрессированные животные',
-            'Зрелищные шоу',
-            'Праздничная дискотека',
-            'Объемные декорации',
-            'Оформление шарами',
-            'Фото/видеосъемка'
-            ],
-        video: 'https://www.youtube.com/watch?v=16IndzFp8HQ'
+        title:'Праздник с Питер Пеном',
+        image: bannerPitterPen,
+        video: 'https://youtu.be/pUturTyc5LE',
+        videoId: 'pUturTyc5LE'
+    },
+
+    {
+        id:5,
+        title:'Шерлок Холмс',
+        image: bannerSherlock,
+        video: 'https://youtu.be/ll7AeUmAGNs',
+        videoId: 'll7AeUmAGNs'
     },
 ]

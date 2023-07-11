@@ -42,17 +42,10 @@ function Portfolio({handleFormModal}) {
                            <p className="portfolioHeader1">{title}</p>
                        </div>
                        ) } 
-               if (id>=3) {
-                   return (
-                       <div onClick={() => handleModal(id)}  key={id} className="cell bottomCell" style={{backgroundImage:`url(${image})`}}>
-                           <p className="portfolioHeader2">{title}</p>
-                           <img src={playWhite} alt="playWhite" className='playPortfolio2'/>
-                       </div>
-                       ) 
-               }
+        
                    else { 
                        return (
-                           <div onClick={() => handleModal(id)}  key={id} className="cell " style={{backgroundImage:`url(${image})`}}>
+                           <div onClick={() => handleModal(id)}  key={id} className="cell2" style={{backgroundImage:`url(${image})`}}>
                                <p className="portfolioHeader2">{title}</p>
                                <img src={playWhite} alt="playWhite" className='playPortfolio2'/>
                            </div>
@@ -64,7 +57,7 @@ function Portfolio({handleFormModal}) {
            </div>
 
         <PortfolioModal  open={isOpen} onClose={() => setIsOpen(false)}>
-            <PortfolioItem id={itemId}/>
+            <PortfolioItem id={itemId} handleFormModal={handleFormModal}/>
         </PortfolioModal>
         </div>
     )
